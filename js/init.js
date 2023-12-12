@@ -6,9 +6,10 @@
 
     // scrolls smooth:
    
-    $('nav a').click(function(){
+    $('nav a').click(function(e){
+      e.preventDefault()
       let href = $(this).attr('href');
-      let offSetTop = $(href).offset().top;
+      let offSetTop = $(href).offset().top - 60;
 
       $('html,body').animate({
         'scrollTop':offSetTop
